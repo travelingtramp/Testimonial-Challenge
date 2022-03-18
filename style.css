@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap');
+
+:root {
+    --clr-purple: 	#7541c8;
+    --clr-grayish-blue: 	#48556a;
+    --clr-blackish-blue: 	#19212e;
+    --clr-White: 	#ffffff;
+    --clr-lightgray: #cfcfcf;
+    --clr-light-grayblue:#ecf2f8;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    height: 100%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background-color: var(--clr-light-grayblue);
+}
+
+main{
+    height: 100%;
+    display: grid;
+    gap: 15px;
+    grid-auto-rows: minmax(1fr, auto);
+    width: 75%;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+small, .testimonial {
+    padding-top: 15px;
+}
+
+footer {
+    margin-top: 25px;
+}
+
+.card__container {
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.name__container {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial {
+    font-size: 1.50rem;
+    font-weight: 600;
+}
+
+.clifford{
+    color: var(--clr-White);
+    background-color: var(--clr-purple);
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-origin: content-box, padding-box;
+}
+
+.walters{
+    color: var(--clr-light-grayblue);
+    background-color: var(--clr-grayish-blue);
+}
+
+.harmon {
+    color: var(--clr-grayish-blue);
+    background-color: var(--clr-White);
+}
+
+.abrams {
+    color: var(--clr-light-grayblue);
+    background-color: var(--clr-blackish-blue);
+}
+
+.whittle {
+    color: var(--clr-grayish-blue);
+    background-color: var(--clr-White);
+}
+
+@media (min-width: 1440px) {
+
+    body {
+        padding: 5%;
+    }
+    main {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .clifford{
+        grid-column: 1 / span 4;
+    }
+    
+    .walters{
+        grid-column: 5 / span 3;
+    }
+    
+    .harmon {
+        grid-column: 1 / span 2;
+    }
+    
+    .abrams {
+        grid-column: 3 / span 5;
+    }
+    
+    .whittle {
+        grid-column: 8 / span 2;
+        grid-row: 1 / span 2;
+    }
+}
